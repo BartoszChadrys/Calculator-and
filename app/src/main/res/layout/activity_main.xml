@@ -12,7 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
+        android:layout_weight="2"
         android:background="@color/black">
 
         <TextView
@@ -33,19 +33,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="4">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1">
+            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
@@ -55,7 +56,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
@@ -65,7 +66,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
@@ -75,7 +76,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
@@ -88,19 +89,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="4">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1">
+            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -110,7 +112,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -120,7 +122,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -130,7 +132,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
@@ -143,19 +145,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="4">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1">
+            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -165,7 +168,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -175,7 +178,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -185,7 +188,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
@@ -198,19 +201,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="4">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1">
+            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -220,7 +224,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -230,7 +234,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -240,7 +244,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
@@ -253,19 +257,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:layout_weight="4">
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="10dp"
-            android:layout_weight="1">
+            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
 
             <Button
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -275,7 +280,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
@@ -285,7 +290,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/buttonMargin"
                 android:textSize="@dimen/buttonTextSize"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"

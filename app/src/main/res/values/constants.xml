@@ -2,5 +2,7 @@
 <resources>
 
     <dimen name="buttonTextSize">25sp</dimen>
+    <dimen name="buttonMargin">5dp</dimen>
+    <dimen name="buttonsLayoutMargin">10dp</dimen>
 
 </resources>
