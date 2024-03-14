@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
         // Equals function
 
         fun equals() {
+            if (previousNumber == "" || currentNumber == "") {
+                return
+            }
             var result = 0.0
             when (currentOperation) {
                 "+" -> result = previousNumber.toDouble() + currentNumber.toDouble()
@@ -57,9 +60,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun updateOperation(operation: String) {
-            if (previousNumber != "" && currentNumber != "") {
-                equals()
+            if (binding.tvResults.text == "*" || binding.tvResults.text == "/" ||
+                binding.tvResults.text == "-" || binding.tvResults.text == "+") {
+                currentOperation = operation
+                binding.tvResults.text = currentOperation
+                return
             }
+            equals()
             currentOperation = operation
             previousNumber = currentNumber
             currentNumber = "0"
