@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     private var previousNumber = ""
     private var currentNumber = "0"
     private var currentOperation = ""
+    private var isAfterClear = false
 
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,8 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         // Equals function
 
+        fun isShowingArithmetic(): Boolean {
+            if (binding.tvResults.text == "*" || binding.tvResults.text == "/" ||
+                binding.tvResults.text == "-" || binding.tvResults.text == "+") {
+                return true
+            }
+            return false
+        }
+
         fun equals() {
-            if (previousNumber == "" || currentNumber == "") {
+            if (previousNumber == "" || currentNumber == "" || isShowingArithmetic()) {
                 return
             }
             var result = 0.0
@@ -60,15 +69,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun updateOperation(operation: String) {
-            if (binding.tvResults.text == "*" || binding.tvResults.text == "/" ||
-                binding.tvResults.text == "-" || binding.tvResults.text == "+") {
+            if (isShowingArithmetic()) {
                 currentOperation = operation
                 binding.tvResults.text = currentOperation
                 return
             }
             equals()
             currentOperation = operation
-            previousNumber = currentNumber
+            if (!isAfterClear) {
+                previousNumber = currentNumber
+            }
+            isAfterClear = false
             currentNumber = "0"
             binding.tvResults.text = currentOperation
         }
@@ -80,6 +91,13 @@ class MainActivity : AppCompatActivity() {
             currentNumber = "0"
             currentOperation = ""
             binding.tvResults.text = "0"
+        }
+
+        binding.clear.setOnClickListener {
+            currentNumber = "0"
+            currentOperation = ""
+            binding.tvResults.text = "0"
+            isAfterClear = true
         }
 
         // Numbers
@@ -102,5 +120,28 @@ class MainActivity : AppCompatActivity() {
         binding.multiply.setOnClickListener { updateOperation("*") }
         binding.divide.setOnClickListener { updateOperation("/") }
         binding.equals.setOnClickListener { equals() }
+
+        // Other
+
+        binding.dot.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                if (!currentNumber.contains('.')) {
+                    currentNumber += "."
+                    binding.tvResults.text = currentNumber
+                } else if (currentNumber.last() == '.') {
+                    currentNumber = currentNumber.toDouble().toInt().toString()
+                    binding.tvResults.text = currentNumber
+                }
+            }
+        }
+
+        binding.plusMinus.setOnClickListener {
+//            if (!isShowingArithmetic()) {
+//                if (currentNumber.first() == '-') {
+//
+//                }
+//                binding.tvResults.text = currentNumber
+//            }
+        }
     }
 }

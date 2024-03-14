@@ -2,7 +2,7 @@
     <string name="app_name">Calculator</string>
     <string name="calculate">Calculate</string>
     <string name="ac">AC</string>
-    <string name="c_ce">C/CE</string>
+    <string name="c_ce">C</string>
     <string name="plus_minus">+/-</string>
     <string name="divide">÷</string>
     <string name="_7">7</string>
