@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/black">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:textAlignment="viewEnd"
+            android:gravity="bottom"
+            android:paddingEnd="10dp"
+            android:paddingBottom="30dp"
+            android:text="Calculator Results"
+            android:textSize="30sp"
+            tools:ignore="RtlCompat">
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/gray"
+                android:textColor="@color/black"
+                android:text="@string/ac"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/gray"
+                android:textColor="@color/black"
+                android:text="@string/c_ce"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/gray"
+                android:textColor="@color/black"
+                android:text="@string/plus_minus"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="@string/divide"/>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_7"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_8"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_9"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="@string/multiply"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_4"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_5"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_6"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="@string/minus"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_1"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_2"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_3"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="@string/plus"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights">
+
+            <Button
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/_0"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/darkGray"
+                android:textColor="@color/white"
+                android:text="@string/dot"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/white"
+                android:text="@string/equals"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

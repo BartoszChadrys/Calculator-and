@@ -5,4 +5,8 @@
     <dimen name="buttonMargin">5dp</dimen>
     <dimen name="buttonsLayoutMargin">10dp</dimen>
 
+    <dimen name="buttonTextSizeLandscape">20sp</dimen>
+    <dimen name="buttonMarginLandscape">3dp</dimen>
+    <dimen name="buttonsLayoutMarginLandscape">3dp</dimen>
+
 </resources>
