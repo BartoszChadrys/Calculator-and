@@ -25,6 +25,28 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        // Equals function
+
+        fun equals() {
+            var result = 0.0
+            when (currentOperation) {
+                "+" -> result = previousNumber.toDouble() + currentNumber.toDouble()
+                "-" -> result = previousNumber.toDouble() - currentNumber.toDouble()
+                "*" -> result = previousNumber.toDouble() * currentNumber.toDouble()
+                "/" -> result = previousNumber.toDouble() / currentNumber.toDouble()
+            }
+            if (result.toInt().toDouble() == result) {
+                currentNumber = result.toInt().toString()
+            } else {
+                currentNumber = result.toString()
+            }
+            binding.tvResults.text = currentNumber
+            currentOperation = ""
+            previousNumber = ""
+        }
+
+        // Updating
+
         fun updateNumber(number: String) {
             if (currentNumber == "0") {
                 currentNumber = number
@@ -35,31 +57,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun updateOperation(operation: String) {
+            if (previousNumber != "" && currentNumber != "") {
+                equals()
+            }
             currentOperation = operation
             previousNumber = currentNumber
             currentNumber = "0"
             binding.tvResults.text = currentOperation
         }
 
-        // Equals function
-
-        binding.equals.setOnClickListener {
-            var result = 0.0
-            when (currentOperation) {
-                "+" -> result = previousNumber.toDouble() + currentNumber.toDouble()
-                "-" -> result = previousNumber.toDouble() - currentNumber.toDouble()
-                "*" -> result = previousNumber.toDouble() * currentNumber.toDouble()
-                "/" -> result = previousNumber.toDouble() / currentNumber.toDouble()
-            }
-            currentNumber = result.toString()
-            binding.tvResults.text = currentNumber
-            currentOperation = ""
-            previousNumber = ""
-        }
-
         // Clearing
 
         binding.allClear.setOnClickListener {
+            previousNumber = ""
             currentNumber = "0"
             currentOperation = ""
             binding.tvResults.text = "0"
@@ -67,6 +77,7 @@ class MainActivity : AppCompatActivity() {
 
         // Numbers
 
+        binding.zero.setOnClickListener { updateNumber("0") }
         binding.one.setOnClickListener { updateNumber("1") }
         binding.two.setOnClickListener { updateNumber("2") }
         binding.three.setOnClickListener { updateNumber("3") }
@@ -83,5 +94,6 @@ class MainActivity : AppCompatActivity() {
         binding.minus.setOnClickListener { updateOperation("-") }
         binding.multiply.setOnClickListener { updateOperation("*") }
         binding.divide.setOnClickListener { updateOperation("/") }
+        binding.equals.setOnClickListener { equals() }
     }
 }
