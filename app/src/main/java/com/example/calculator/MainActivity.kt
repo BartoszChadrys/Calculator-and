@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         fun equals() {
-            if (previousNumber == "" || currentNumber == "" || isShowingArithmetic()) {
+            if (previousNumber == "" || currentNumber == "" || isShowingArithmetic() || currentOperation == "") {
                 return
             }
             var result = 0.0
@@ -95,8 +95,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.clear.setOnClickListener {
             currentNumber = "0"
-            currentOperation = ""
             binding.tvResults.text = "0"
+            currentOperation = ""
             isAfterClear = true
         }
 
