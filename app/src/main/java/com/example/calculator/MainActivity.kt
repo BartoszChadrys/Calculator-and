@@ -136,12 +136,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.plusMinus.setOnClickListener {
-//            if (!isShowingArithmetic()) {
-//                if (currentNumber.first() == '-') {
-//
-//                }
-//                binding.tvResults.text = currentNumber
-//            }
+            if (!isShowingArithmetic()) {
+                currentNumber = (-(currentNumber.toDouble())).toString()
+                val result = currentNumber.toDouble()
+                if (result == result.toInt().toDouble()) {
+                    currentNumber = result.toInt().toString()
+                }
+                binding.tvResults.text = currentNumber
+            }
         }
     }
 }
