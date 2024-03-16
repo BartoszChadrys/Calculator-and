@@ -9,12 +9,6 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private var previousNumber = ""
-    private var currentNumber = "0"
-    private var currentOperation = ""
-    private var isAfterClear = false
-
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.basicCalculator.setOnClickListener {
             val intent = Intent(this, BasicCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.about.setOnClickListener {
+            val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
 
