@@ -87,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="15sp"
+                android:textSize="10sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="%"/>
