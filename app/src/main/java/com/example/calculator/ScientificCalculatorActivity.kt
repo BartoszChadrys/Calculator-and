@@ -6,6 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.calculator.databinding.ActivityScientificCalculatorBinding
+import kotlin.math.cos
+import kotlin.math.ln
+import kotlin.math.log
+import kotlin.math.pow
+import kotlin.math.sin
+import kotlin.math.sqrt
+import kotlin.math.tan
 
 class ScientificCalculatorActivity : AppCompatActivity() {
     private var previousNumber = ""
@@ -25,17 +32,101 @@ class ScientificCalculatorActivity : AppCompatActivity() {
             insets
         }
 
-        // Scientific
-
-        // Basic
-
         fun isShowingArithmetic(): Boolean {
             if (binding.tvResults.text == "*" || binding.tvResults.text == "/" ||
-                binding.tvResults.text == "-" || binding.tvResults.text == "+") {
+                binding.tvResults.text == "-" || binding.tvResults.text == "+" ||
+                binding.tvResults.text == "^") {
                 return true
             }
             return false
         }
+
+        fun checkIfNumberIsInt(number: Double): String {
+            if (number == number.toInt().toDouble()) {
+                return number.toInt().toString()
+            }
+            return number.toString()
+        }
+
+        // Scientific
+
+        binding.sin.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = sin(currentNumber.toDouble()).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.cos.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = cos(currentNumber.toDouble()).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.tan.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = tan(currentNumber.toDouble()).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.log.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = log(currentNumber.toDouble(), 10.0).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.ln.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = ln(currentNumber.toDouble()).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.sqrt.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = sqrt(currentNumber.toDouble()).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.powerDouble.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = currentNumber.toDouble().pow(2.0).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        binding.powerY.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentOperation = "^"
+                if (!isAfterClear) {
+                    previousNumber = currentNumber
+                }
+                isAfterClear = false
+                currentNumber = "0"
+                binding.tvResults.text = currentOperation
+            }
+        }
+
+        binding.percent.setOnClickListener {
+            if (!isShowingArithmetic()) {
+                currentNumber = (currentNumber.toDouble() / 100).toString()
+                currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+                binding.tvResults.text = currentNumber
+            }
+        }
+
+        // Basic
 
         fun equals() {
             if (previousNumber == "" || currentNumber == "" || isShowingArithmetic() || currentOperation == "") {
@@ -47,12 +138,9 @@ class ScientificCalculatorActivity : AppCompatActivity() {
                 "-" -> result = previousNumber.toDouble() - currentNumber.toDouble()
                 "*" -> result = previousNumber.toDouble() * currentNumber.toDouble()
                 "/" -> result = previousNumber.toDouble() / currentNumber.toDouble()
+                "^" -> result = previousNumber.toDouble().pow(currentNumber.toDouble())
             }
-            if (result.toInt().toDouble() == result) {
-                currentNumber = result.toInt().toString()
-            } else {
-                currentNumber = result.toString()
-            }
+            currentNumber = checkIfNumberIsInt(result)
             binding.tvResults.text = currentNumber
             currentOperation = ""
             previousNumber = ""
@@ -140,9 +228,7 @@ class ScientificCalculatorActivity : AppCompatActivity() {
             if (!isShowingArithmetic()) {
                 currentNumber = (-(currentNumber.toDouble())).toString()
                 val result = currentNumber.toDouble()
-                if (result == result.toInt().toDouble()) {
-                    currentNumber = result.toInt().toString()
-                }
+                currentNumber = checkIfNumberIsInt(result)
                 binding.tvResults.text = currentNumber
             }
         }

@@ -26,6 +26,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.scientificCalculator.setOnClickListener {
+            val intent = Intent(this, ScientificCalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.about.setOnClickListener {
             val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)

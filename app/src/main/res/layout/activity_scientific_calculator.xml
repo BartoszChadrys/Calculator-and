@@ -65,7 +65,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="14sp"
+                android:textSize="11sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="log"/>
@@ -76,7 +76,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="ln"/>
@@ -87,7 +87,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="%"/>
@@ -98,7 +98,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="x²"/>
@@ -109,7 +109,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="xⁿ"/>
@@ -137,7 +137,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:textSize="20sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="sin"/>
@@ -148,7 +148,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="cos"/>
@@ -159,7 +159,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:textSize="20sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="tan"/>
@@ -170,7 +170,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:textSize="20sp"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="√"/>

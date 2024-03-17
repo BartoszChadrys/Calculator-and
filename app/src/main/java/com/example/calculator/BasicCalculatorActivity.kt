@@ -35,6 +35,13 @@ class BasicCalculatorActivity : AppCompatActivity() {
             return false
         }
 
+        fun checkIfNumberIsInt(number: Double): String {
+            if (number == number.toInt().toDouble()) {
+                return number.toInt().toString()
+            }
+            return number.toString()
+        }
+
         fun equals() {
             if (previousNumber == "" || currentNumber == "" || isShowingArithmetic() || currentOperation == "") {
                 return
@@ -46,11 +53,7 @@ class BasicCalculatorActivity : AppCompatActivity() {
                 "*" -> result = previousNumber.toDouble() * currentNumber.toDouble()
                 "/" -> result = previousNumber.toDouble() / currentNumber.toDouble()
             }
-            if (result.toInt().toDouble() == result) {
-                currentNumber = result.toInt().toString()
-            } else {
-                currentNumber = result.toString()
-            }
+            currentNumber = checkIfNumberIsInt(result)
             binding.tvResults.text = currentNumber
             currentOperation = ""
             previousNumber = ""
@@ -138,9 +141,7 @@ class BasicCalculatorActivity : AppCompatActivity() {
             if (!isShowingArithmetic()) {
                 currentNumber = (-(currentNumber.toDouble())).toString()
                 val result = currentNumber.toDouble()
-                if (result == result.toInt().toDouble()) {
-                    currentNumber = result.toInt().toString()
-                }
+                currentNumber = checkIfNumberIsInt(result)
                 binding.tvResults.text = currentNumber
             }
         }
