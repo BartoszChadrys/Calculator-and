@@ -145,5 +145,9 @@ class BasicCalculatorActivity : AppCompatActivity() {
                 binding.tvResults.text = currentNumber
             }
         }
+
+        binding.back.setOnClickListener {
+            finish()
+        }
     }
 }

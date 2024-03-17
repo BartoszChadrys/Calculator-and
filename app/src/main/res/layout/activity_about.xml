@@ -8,6 +8,21 @@
     android:background="@color/gray"
     tools:context=".AboutActivity">
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/darkGray"
+        android:text="@string/back"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </Button>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

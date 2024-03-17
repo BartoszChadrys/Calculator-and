@@ -13,7 +13,21 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
+        android:orientation="vertical"
         android:background="@color/black">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="@color/darkGray"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="18dp">
+        </Button>
 
         <TextView
             android:id="@+id/tvResults"

@@ -30,6 +30,7 @@
     <string name="equals">=</string>
     <string name="start_zero">0</string>
     <string name="about_app_description">This app was made by Bartosz Chadryś on mobile technology course.</string>
+    <string name="back"><![CDATA[<]]> home</string>
 
     // Scientific Calculator
 
