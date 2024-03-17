@@ -9,4 +9,9 @@
     <dimen name="buttonMarginLandscape">3dp</dimen>
     <dimen name="buttonsLayoutMarginLandscape">3dp</dimen>
 
+    <dimen name="buttonTextSizeScientificLandscape">10sp</dimen>
+    <dimen name="buttonMarginScientificLandscape">2dp</dimen>
+    <dimen name="buttonsLayoutMarginScientificLandscape">0dp</dimen>
+
+
 </resources>

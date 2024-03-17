@@ -26,7 +26,7 @@
             android:backgroundTint="@color/darkGray"
             android:text="@string/back"
             android:textColor="@color/white"
-            android:textSize="18dp">
+            android:textSize="16sp">
         </Button>
 
         <TextView

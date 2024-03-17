@@ -1,6 +1,7 @@
 package com.example.calculator
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -14,6 +15,25 @@ class BasicCalculatorActivity : AppCompatActivity() {
     private var isAfterClear = false
 
     lateinit var binding: ActivityBasicCalculatorBinding
+
+    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
+        super.onSaveInstanceState(outState, outPersistentState)
+        outState.putString("previousNumber", previousNumber)
+        outState.putString("currentNumber", currentNumber)
+        outState.putString("currentOperation", currentOperation)
+        outState.putBoolean("isAfterClear", isAfterClear)
+        outState.putString("tvResults", binding.tvResults.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        previousNumber = savedInstanceState.getString("previousNumber", "")
+        currentNumber = savedInstanceState.getString("currentNumber", "0")
+        currentOperation = savedInstanceState.getString("currentOperation", "")
+        isAfterClear = savedInstanceState.getBoolean("isAfterClear", false)
+        binding.tvResults.text = savedInstanceState.getString("tvResults", "0")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
