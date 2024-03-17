@@ -6,14 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black"
-    tools:context=".BasicCalculatorActivity">
+    android:background="@color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:orientation="vertical"
         android:background="@color/black">
 
         <Button
@@ -39,10 +37,10 @@
             android:paddingEnd="10dp"
             android:paddingBottom="30dp"
             android:text="@string/start_zero"
-            android:textSize="50sp"
+            android:textSize="30sp"
             android:lines="1"
             android:maxLength="12"
-            tools:ignore="RtlCompat">
+            tools:ignore="RtlCompat,RtlSymmetry">
         </TextView>
     </LinearLayout>
 
@@ -55,7 +53,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
             android:layout_weight="1"
             tools:ignore="NestedWeights">
 
@@ -64,8 +62,8 @@
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
                 android:text="@string/ac"/>
@@ -75,8 +73,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
                 android:text="@string/c_ce"/>
@@ -86,8 +84,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
                 android:text="@string/plus_minus"/>
@@ -97,8 +95,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/divide"/>
@@ -115,7 +113,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
             android:layout_weight="1"
             tools:ignore="NestedWeights">
 
@@ -124,8 +122,8 @@
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_7"/>
@@ -135,8 +133,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_8"/>
@@ -146,8 +144,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_9"/>
@@ -157,8 +155,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/multiply"/>
@@ -175,7 +173,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
             android:layout_weight="1"
             tools:ignore="NestedWeights">
 
@@ -184,8 +182,8 @@
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_4"/>
@@ -195,8 +193,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_5"/>
@@ -206,8 +204,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_6"/>
@@ -217,8 +215,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/minus"/>
@@ -235,7 +233,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
             android:layout_weight="1"
             tools:ignore="NestedWeights">
 
@@ -244,8 +242,8 @@
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_1"/>
@@ -255,8 +253,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_2"/>
@@ -266,8 +264,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_3"/>
@@ -277,8 +275,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/plus"/>
@@ -295,7 +293,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/buttonsLayoutMargin"
+            android:layout_margin="@dimen/buttonsLayoutMarginLandscape"
             android:layout_weight="1"
             tools:ignore="NestedWeights">
 
@@ -304,8 +302,8 @@
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
                 android:layout_weight="2"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_0"/>
@@ -315,8 +313,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/dot"/>
@@ -326,8 +324,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMargin"
-                android:textSize="@dimen/buttonTextSize"
+                android:layout_margin="@dimen/buttonMarginLandscape"
+                android:textSize="@dimen/buttonTextSizeLandscape"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/equals"/>
