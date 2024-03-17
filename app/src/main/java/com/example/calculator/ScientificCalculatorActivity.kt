@@ -5,19 +5,19 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.calculator.databinding.ActivityBasicCalculatorBinding
+import com.example.calculator.databinding.ActivityScientificCalculatorBinding
 
-class BasicCalculatorActivity : AppCompatActivity() {
+class ScientificCalculatorActivity : AppCompatActivity() {
     private var previousNumber = ""
     private var currentNumber = "0"
     private var currentOperation = ""
     private var isAfterClear = false
 
-    lateinit var binding: ActivityBasicCalculatorBinding
+    lateinit var binding: ActivityScientificCalculatorBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        binding = ActivityBasicCalculatorBinding.inflate(layoutInflater)
+        binding = ActivityScientificCalculatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -25,7 +25,9 @@ class BasicCalculatorActivity : AppCompatActivity() {
             insets
         }
 
-        // Equals function
+        // Scientific
+
+        // Basic
 
         fun isShowingArithmetic(): Boolean {
             if (binding.tvResults.text == "*" || binding.tvResults.text == "/" ||
