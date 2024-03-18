@@ -16,8 +16,8 @@ class BasicCalculatorActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityBasicCalculatorBinding
 
-    override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {
-        super.onSaveInstanceState(outState, outPersistentState)
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
         outState.putString("previousNumber", previousNumber)
         outState.putString("currentNumber", currentNumber)
         outState.putString("currentOperation", currentOperation)

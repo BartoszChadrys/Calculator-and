@@ -14,13 +14,15 @@
         tools:targetApi="31">
         <activity
             android:name=".ScientificCalculatorActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="orientation"/>
         <activity
             android:name=".AboutActivity"
             android:exported="false" />
         <activity
             android:name=".BasicCalculatorActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="orientation"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

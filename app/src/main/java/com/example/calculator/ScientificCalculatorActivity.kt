@@ -21,6 +21,25 @@ class ScientificCalculatorActivity : AppCompatActivity() {
     private var isAfterClear = false
 
     lateinit var binding: ActivityScientificCalculatorBinding
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("previousNumber", previousNumber)
+        outState.putString("currentNumber", currentNumber)
+        outState.putString("currentOperation", currentOperation)
+        outState.putBoolean("isAfterClear", isAfterClear)
+        outState.putString("tvResults", binding.tvResults.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        previousNumber = savedInstanceState.getString("previousNumber", "")
+        currentNumber = savedInstanceState.getString("currentNumber", "0")
+        currentOperation = savedInstanceState.getString("currentOperation", "")
+        isAfterClear = savedInstanceState.getBoolean("isAfterClear", false)
+        binding.tvResults.text = savedInstanceState.getString("tvResults", "0")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
