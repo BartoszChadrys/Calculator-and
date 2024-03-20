@@ -39,7 +39,9 @@
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
             android:text="@string/start_zero"
-            android:textSize="30sp"
+            android:autoSizeMinTextSize="30sp"
+            android:autoSizeMaxTextSize="70sp"
+            android:autoSizeTextType="uniform"
             android:lines="1"
             android:maxLength="12"
             tools:ignore="RtlCompat">
@@ -65,10 +67,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="10sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="log"/>
+                android:text="@string/log"/>
 
             <Button
                 android:id="@+id/ln"
@@ -76,10 +80,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="ln"/>
+                android:text="@string/ln"/>
 
             <Button
                 android:id="@+id/percent"
@@ -87,10 +93,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="%"/>
+                android:text="@string/percent"/>
 
             <Button
                 android:id="@+id/powerDouble"
@@ -98,10 +106,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="x²"/>
+                android:text="@string/x_double"/>
 
             <Button
                 android:id="@+id/powerY"
@@ -109,10 +119,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="xⁿ"/>
+                android:text="@string/x_n"/>
 
         </LinearLayout>
 
@@ -137,10 +149,12 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="sin"/>
+                android:text="@string/sin"/>
 
             <Button
                 android:id="@+id/cos"
@@ -148,10 +162,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="cos"/>
+                android:text="@string/cos"/>
 
             <Button
                 android:id="@+id/tan"
@@ -159,10 +175,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="tan"/>
+                android:text="@string/tan"/>
 
             <Button
                 android:id="@+id/sqrt"
@@ -170,10 +188,12 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="10sp"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
-                android:text="√"/>
+                android:text="@string/sqrt"/>
 
         </LinearLayout>
 
@@ -198,7 +218,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
                 android:text="@string/ac"/>
@@ -209,7 +231,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
                 android:text="@string/c_ce"/>
@@ -220,7 +244,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/gray"
                 android:textColor="@color/black"
                 android:text="@string/plus_minus"/>
@@ -231,7 +257,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/divide"/>
@@ -258,7 +286,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_7"/>
@@ -269,7 +299,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_8"/>
@@ -280,7 +312,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_9"/>
@@ -291,7 +325,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/multiply"/>
@@ -318,7 +354,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_4"/>
@@ -329,7 +367,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_5"/>
@@ -340,7 +380,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_6"/>
@@ -351,7 +393,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/minus"/>
@@ -378,7 +422,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_1"/>
@@ -389,7 +435,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_2"/>
@@ -400,7 +448,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_3"/>
@@ -411,7 +461,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/plus"/>
@@ -438,7 +490,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="2"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/_0"/>
@@ -449,7 +503,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/darkGray"
                 android:textColor="@color/white"
                 android:text="@string/dot"/>
@@ -460,7 +516,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:textSize="@dimen/buttonTextSizeScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
                 android:backgroundTint="@color/orange"
                 android:textColor="@color/white"
                 android:text="@string/equals"/>
