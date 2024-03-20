@@ -202,6 +202,9 @@ class ScientificCalculatorActivity : AppCompatActivity() {
         }
 
         binding.clear.setOnClickListener {
+            if (isAfterClear) {
+                previousNumber = ""
+            }
             currentNumber = "0"
             binding.tvResults.text = "0"
             currentOperation = ""
