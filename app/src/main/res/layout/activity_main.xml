@@ -43,7 +43,10 @@
             android:backgroundTint="@color/darkGray"
             android:text="@string/basic_calculator"
             android:textColor="@color/white"
-            android:textSize="16dp">
+            android:lines="1"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeTextType="uniform">
         </Button>
 
         <Button
@@ -55,7 +58,10 @@
             android:backgroundTint="@color/darkGray"
             android:text="@string/scientific_calculator"
             android:textColor="@color/white"
-            android:textSize="16dp">
+            android:lines="1"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeTextType="uniform">
         </Button>
 
         <Button
@@ -67,7 +73,10 @@
             android:backgroundTint="@color/orange"
             android:text="@string/About"
             android:textColor="@color/white"
-            android:textSize="16dp">
+            android:lines="1"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeTextType="uniform">
         </Button>
 
         <Button
@@ -79,7 +88,10 @@
             android:backgroundTint="@color/red"
             android:text="@string/Exit"
             android:textColor="@color/white"
-            android:textSize="16dp">
+            android:lines="1"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeTextType="uniform">
         </Button>
 
     </LinearLayout>

@@ -26,7 +26,9 @@
             android:backgroundTint="@color/darkGray"
             android:text="@string/back"
             android:textColor="@color/white"
-            android:textSize="10sp">
+            android:autoSizeMinTextSize="11sp"
+            android:autoSizeMaxTextSize="30sp"
+            android:autoSizeTextType="uniform">
         </Button>
 
         <TextView
@@ -88,19 +90,6 @@
                 android:text="@string/ln"/>
 
             <Button
-                android:id="@+id/percent"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="@dimen/buttonMarginScientificLandscape"
-                android:autoSizeMinTextSize="15sp"
-                android:autoSizeMaxTextSize="30sp"
-                android:autoSizeTextType="uniform"
-                android:backgroundTint="@color/darkGrayTransparent"
-                android:textColor="@color/white"
-                android:text="@string/percent"/>
-
-            <Button
                 android:id="@+id/powerDouble"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -125,23 +114,6 @@
                 android:backgroundTint="@color/darkGrayTransparent"
                 android:textColor="@color/white"
                 android:text="@string/x_n"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_margin="@dimen/buttonsLayoutMarginScientificLandscape"
-            android:layout_weight="1"
-            tools:ignore="NestedWeights">
 
             <Button
                 android:id="@+id/sin"
@@ -485,10 +457,23 @@
             tools:ignore="NestedWeights">
 
             <Button
+                android:id="@+id/percent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/buttonMarginScientificLandscape"
+                android:autoSizeMinTextSize="15sp"
+                android:autoSizeMaxTextSize="30sp"
+                android:autoSizeTextType="uniform"
+                android:backgroundTint="@color/darkGrayTransparent"
+                android:textColor="@color/white"
+                android:text="@string/percent"/>
+
+            <Button
                 android:id="@+id/zero"
                 android:layout_height="match_parent"
                 android:layout_width="0dp"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:layout_margin="@dimen/buttonMarginScientificLandscape"
                 android:autoSizeMinTextSize="15sp"
                 android:autoSizeMaxTextSize="30sp"
