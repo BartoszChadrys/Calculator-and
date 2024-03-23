@@ -9,29 +9,26 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.calculator.databinding.ActivityBasicCalculatorBinding
 
 class BasicCalculatorActivity : AppCompatActivity() {
-    private var previousNumber = ""
-    private var currentNumber = "0"
-    private var currentOperation = ""
-    private var isAfterClear = false
-
-    lateinit var binding: ActivityBasicCalculatorBinding
+    private lateinit var binding: ActivityBasicCalculatorBinding
+    private var vm = CalculatorViewModel()
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("previousNumber", previousNumber)
-        outState.putString("currentNumber", currentNumber)
-        outState.putString("currentOperation", currentOperation)
-        outState.putBoolean("isAfterClear", isAfterClear)
-        outState.putString("tvResults", binding.tvResults.text.toString())
+        outState.putString("previousNumber", vm.previousNumber)
+        outState.putString("currentNumber", vm.currentNumber)
+        outState.putString("currentOperation", vm.currentOperation)
+        outState.putBoolean("isAfterClear", vm.isAfterClear)
+        outState.putString("tvResults", vm.tvResults)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        previousNumber = savedInstanceState.getString("previousNumber", "")
-        currentNumber = savedInstanceState.getString("currentNumber", "0")
-        currentOperation = savedInstanceState.getString("currentOperation", "")
-        isAfterClear = savedInstanceState.getBoolean("isAfterClear", false)
-        binding.tvResults.text = savedInstanceState.getString("tvResults", "0")
+        vm.previousNumber = savedInstanceState.getString("previousNumber", "")
+        vm.currentNumber = savedInstanceState.getString("currentNumber", "0")
+        vm.currentOperation = savedInstanceState.getString("currentOperation", "")
+        vm.isAfterClear = savedInstanceState.getBoolean("isAfterClear", false)
+        vm.tvResults = savedInstanceState.getString("tvResults", "0")
+        binding.tvResults.text = vm.tvResults
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,84 +42,26 @@ class BasicCalculatorActivity : AppCompatActivity() {
             insets
         }
 
-        // Equals function
-
-        fun isShowingArithmetic(): Boolean {
-            if (binding.tvResults.text == "*" || binding.tvResults.text == "/" ||
-                binding.tvResults.text == "-" || binding.tvResults.text == "+") {
-                return true
-            }
-            return false
-        }
-
-        fun checkIfNumberIsInt(number: Double): String {
-            if (number == number.toInt().toDouble()) {
-                return number.toInt().toString()
-            }
-            return number.toString()
-        }
-
-        fun equals() {
-            if (previousNumber == "" || currentNumber == "" || isShowingArithmetic() || currentOperation == "") {
-                return
-            }
-            var result = 0.0
-            when (currentOperation) {
-                "+" -> result = previousNumber.toDouble() + currentNumber.toDouble()
-                "-" -> result = previousNumber.toDouble() - currentNumber.toDouble()
-                "*" -> result = previousNumber.toDouble() * currentNumber.toDouble()
-                "/" -> result = previousNumber.toDouble() / currentNumber.toDouble()
-            }
-            currentNumber = checkIfNumberIsInt(result)
-            binding.tvResults.text = currentNumber
-            currentOperation = ""
-            previousNumber = ""
-        }
-
-        // Updating
-
         fun updateNumber(number: String) {
-            if (currentNumber == "0") {
-                currentNumber = number
-            } else {
-                currentNumber += number
-            }
-            binding.tvResults.text = currentNumber
+            vm.updateNumber(number)
+            binding.tvResults.text = vm.tvResults
         }
 
         fun updateOperation(operation: String) {
-            if (isShowingArithmetic()) {
-                currentOperation = operation
-                binding.tvResults.text = currentOperation
-                return
-            }
-            equals()
-            currentOperation = operation
-            if (!isAfterClear) {
-                previousNumber = currentNumber
-            }
-            isAfterClear = false
-            currentNumber = "0"
-            binding.tvResults.text = currentOperation
+            vm.updateOperation(operation)
+            binding.tvResults.text = vm.tvResults
         }
 
         // Clearing
 
         binding.allClear.setOnClickListener {
-            previousNumber = ""
-            currentNumber = "0"
-            currentOperation = ""
-            binding.tvResults.text = "0"
+            vm.allClear()
+            binding.tvResults.text = vm.tvResults
         }
 
         binding.clear.setOnClickListener {
-            if (isAfterClear) {
-                previousNumber = ""
-            }
-            currentNumber = "0"
-            binding.tvResults.text = "0"
-            currentOperation = ""
-            isAfterClear = true
+            vm.clear()
+            binding.tvResults.text = vm.tvResults
         }
 
         // Numbers
@@ -144,29 +83,21 @@ class BasicCalculatorActivity : AppCompatActivity() {
         binding.minus.setOnClickListener { updateOperation("-") }
         binding.multiply.setOnClickListener { updateOperation("*") }
         binding.divide.setOnClickListener { updateOperation("/") }
-        binding.equals.setOnClickListener { equals() }
+        binding.equals.setOnClickListener {
+            vm.equals()
+            binding.tvResults.text = vm.tvResults
+        }
 
         // Other
 
         binding.dot.setOnClickListener {
-            if (!isShowingArithmetic()) {
-                if (!currentNumber.contains('.')) {
-                    currentNumber += "."
-                    binding.tvResults.text = currentNumber
-                } else if (currentNumber.last() == '.') {
-                    currentNumber = currentNumber.toDouble().toInt().toString()
-                    binding.tvResults.text = currentNumber
-                }
-            }
+            vm.dot()
+            binding.tvResults.text = vm.tvResults
         }
 
         binding.plusMinus.setOnClickListener {
-            if (!isShowingArithmetic()) {
-                currentNumber = (-(currentNumber.toDouble())).toString()
-                val result = currentNumber.toDouble()
-                currentNumber = checkIfNumberIsInt(result)
-                binding.tvResults.text = currentNumber
-            }
+            vm.plusMinus()
+            binding.tvResults.text = vm.tvResults
         }
 
         binding.back.setOnClickListener {
