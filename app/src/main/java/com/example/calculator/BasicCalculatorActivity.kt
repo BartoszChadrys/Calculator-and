@@ -10,7 +10,7 @@ import com.example.calculator.databinding.ActivityBasicCalculatorBinding
 
 class BasicCalculatorActivity : AppCompatActivity() {
     private lateinit var binding: ActivityBasicCalculatorBinding
-    private var vm = CalculatorViewModel()
+    private val vm = CalculatorViewModel()
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)

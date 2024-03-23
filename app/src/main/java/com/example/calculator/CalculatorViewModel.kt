@@ -1,6 +1,13 @@
 package com.example.calculator
 
 import androidx.lifecycle.ViewModel
+import kotlin.math.cos
+import kotlin.math.ln
+import kotlin.math.log
+import kotlin.math.pow
+import kotlin.math.sin
+import kotlin.math.sqrt
+import kotlin.math.tan
 
 class CalculatorViewModel: ViewModel() {
     var previousNumber = ""
@@ -34,6 +41,7 @@ class CalculatorViewModel: ViewModel() {
             "-" -> result = previousNumber.toDouble() - currentNumber.toDouble()
             "*" -> result = previousNumber.toDouble() * currentNumber.toDouble()
             "/" -> result = previousNumber.toDouble() / currentNumber.toDouble()
+            "^" -> result = previousNumber.toDouble().pow(currentNumber.toDouble())
         }
         currentNumber = checkIfNumberIsInt(result)
         tvResults = currentNumber
@@ -100,6 +108,84 @@ class CalculatorViewModel: ViewModel() {
             currentNumber = (-(currentNumber.toDouble())).toString()
             val result = currentNumber.toDouble()
             currentNumber = checkIfNumberIsInt(result)
+            tvResults = currentNumber
+        }
+    }
+
+    // Scientific operations
+
+    fun sin() {
+        if (!isShowingArithmetic()) {
+            currentNumber = sin(currentNumber.toDouble()).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun cos() {
+        if (!isShowingArithmetic()) {
+            currentNumber = cos(currentNumber.toDouble()).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun tan() {
+        if (!isShowingArithmetic()) {
+            currentNumber = tan(currentNumber.toDouble()).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun log() {
+        if (!isShowingArithmetic()) {
+            currentNumber = log(currentNumber.toDouble(), 10.0).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun ln() {
+        if (!isShowingArithmetic()) {
+            currentNumber = ln(currentNumber.toDouble()).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun sqrt() {
+        if (!isShowingArithmetic()) {
+            currentNumber = sqrt(currentNumber.toDouble()).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun powerDouble() {
+        if (!isShowingArithmetic()) {
+            currentNumber = currentNumber.toDouble().pow(2.0).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
+            tvResults = currentNumber
+        }
+    }
+
+    fun powerY() {
+        if (!isShowingArithmetic()) {
+            currentOperation = "^"
+            if (!isAfterClear) {
+                previousNumber = currentNumber
+            }
+            isAfterClear = false
+            currentNumber = "0"
+            tvResults = currentOperation
+        }
+    }
+
+    fun percent() {
+        if (!isShowingArithmetic()) {
+            currentNumber = (currentNumber.toDouble() / 100).toString()
+            currentNumber = checkIfNumberIsInt(currentNumber.toDouble())
             tvResults = currentNumber
         }
     }
