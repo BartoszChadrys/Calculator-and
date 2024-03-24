@@ -2,10 +2,12 @@ package com.example.calculator
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.calculator.databinding.ActivityScientificCalculatorBinding
+import java.lang.ref.WeakReference
 import kotlin.math.cos
 import kotlin.math.ln
 import kotlin.math.log
@@ -16,32 +18,15 @@ import kotlin.math.tan
 
 class ScientificCalculatorActivity : AppCompatActivity() {
     lateinit var binding: ActivityScientificCalculatorBinding
-    private val vm = CalculatorViewModel()
-
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString("previousNumber", vm.previousNumber)
-        outState.putString("currentNumber", vm.currentNumber)
-        outState.putString("currentOperation", vm.currentOperation)
-        outState.putBoolean("isAfterClear", vm.isAfterClear)
-        outState.putString("tvResults", vm.tvResults)
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        vm.previousNumber = savedInstanceState.getString("previousNumber", "")
-        vm.currentNumber = savedInstanceState.getString("currentNumber", "0")
-        vm.currentOperation = savedInstanceState.getString("currentOperation", "")
-        vm.isAfterClear = savedInstanceState.getBoolean("isAfterClear", false)
-        vm.tvResults = savedInstanceState.getString("tvResults", "0")
-        binding.tvResults.text = vm.tvResults
-    }
+    private val vm: CalculatorViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityScientificCalculatorBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        vm.context = WeakReference(this)
+        binding.tvResults.text = vm.tvResults
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
